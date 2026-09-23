@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: product-query-service
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.neo.product_command_service.dto,com.neo.product_query_service.dto,com.neo.product_query_service.entity
+        spring.json.type.mapping: com.neo.product_command_service.dto.ProductEvent:com.neo.product_query_service.dto.ProductEvent

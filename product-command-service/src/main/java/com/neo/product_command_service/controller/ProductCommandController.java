@@ -1,5 +1,6 @@
 package com.neo.product_command_service.controller;
 
+import com.neo.product_command_service.dto.ProductEvent;
 import com.neo.product_command_service.entity.Product;
 import com.neo.product_command_service.service.ProductCommandService;
 import org.springframework.web.bind.annotation.*;

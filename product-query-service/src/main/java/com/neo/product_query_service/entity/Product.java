@@ -14,7 +14,6 @@ import lombok.Setter;
 public class Product {
 
     @Id
-    @GeneratedValue
     private Long id;
     private String name;
     private String description;
